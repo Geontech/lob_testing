@@ -7,6 +7,7 @@ lobCalcDummy_i::lobCalcDummy_i(const char *uuid, const char *label) :
 {
 	_stream_id = "DFStream";
 	count = 0;
+	lob = 0;
 }
 
 lobCalcDummy_i::~lobCalcDummy_i()
@@ -30,6 +31,7 @@ int lobCalcDummy_i::serviceFunction()
 	            	count = 0;
 	            }
 
+	            /*
 	            //Increment LOB by 1 each packet
 	            if(count ==0){
 	            	if(lob == 90){
@@ -39,6 +41,7 @@ int lobCalcDummy_i::serviceFunction()
 	            		lob = lob + 1;
 	            	}
 	            }
+	            */
 
 	            //Increment switch pattern
 				if(count ==0){

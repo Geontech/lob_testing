@@ -17,4 +17,23 @@
     <kind kindtype="configure"/>
     <action type="external"/>
   </simple>
+  <simple id="switchPattern_prop" mode="readwrite" type="long">
+    <kind kindtype="configure"/>
+    <action type="external"/>
+  </simple>
+  <simple id="streamID_prop" mode="readwrite" type="string">
+    <value>initial</value>
+    <kind kindtype="configure"/>
+    <action type="external"/>
+  </simple>
+  <simple id="test_mode" mode="readwrite" type="boolean">
+    <value>false</value>
+    <kind kindtype="configure"/>
+    <action type="external"/>
+  </simple>
+  <simple id="test_LOB" mode="readwrite" type="float">
+    <value>45</value>
+    <kind kindtype="configure"/>
+    <action type="external"/>
+  </simple>
 </properties>

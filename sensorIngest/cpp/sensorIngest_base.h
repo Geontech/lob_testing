@@ -1,5 +1,5 @@
-#ifndef LOBCALC_IMPL_BASE_H
-#define LOBCALC_IMPL_BASE_H
+#ifndef SENSORINGEST_IMPL_BASE_H
+#define SENSORINGEST_IMPL_BASE_H
 
 #include <boost/thread.hpp>
 #include <ossie/Resource_impl.h>
@@ -10,7 +10,7 @@
 #define FINISH -1
 #define NORMAL 1
 
-class lobCalc_base;
+class sensorIngest_base;
 
 template < typename TargetClass >
 class ProcessThread
@@ -78,10 +78,10 @@ class ProcessThread
         boost::mutex _eor_mutex;
 };
 
-class lobCalc_base : public Resource_impl
+class sensorIngest_base : public Resource_impl
 {
     public:
-        lobCalc_base(const char *uuid, const char *label);
+        sensorIngest_base(const char *uuid, const char *label);
 
         void start() throw (CF::Resource::StartError, CORBA::SystemException);
 
@@ -98,20 +98,12 @@ class lobCalc_base : public Resource_impl
         virtual int serviceFunction() = 0;
 
     protected:
-        ProcessThread<lobCalc_base> *serviceThread; 
+        ProcessThread<sensorIngest_base> *serviceThread; 
         boost::mutex serviceThreadLock;
 
-        // Member variables exposed as properties
-        float LOB_angle;
-        bool LOB_valid;
-        float Threshold;
-        CORBA::Long switchPattern_prop;
-        std::string streamID_prop;
-        bool test_mode;
-        float test_LOB;
-
         // Ports
-        bulkio::InFloatPort *dataFloat_In;
+        bulkio::InShortPort *dataShort_in;
+        bulkio::OutFloatPort *dataFloat_out;
 
     private:
         void construct();

@@ -1,0 +1,10 @@
+d6a9304332f31e6bb1f8c6e57b62f374 main.cpp
+7c809860fe6e1ed9d21c311631986d13 reconf
+efef081f3d946d2872b11593d5683bff sensorIngest_base.cpp
+cad5a17c7345720aad3f22dfab1e3acd sensorIngest.h
+e9565cbde5d1430e6865dd7ca2830315 Makefile.am
+42f7aa037263c8e033c3689ed5bf2b20 Makefile.am.ide
+61eb9a1afd584d600e4acfa8a1d3c51f sensorIngest_base.h
+2edeb4570ba55b42155b992f38587fb6 build.sh
+dac333615336e1b8e326fb5b933c7c98 configure.ac
+944e91f4bd5d5c843d0cc07420d51caf sensorIngest.cpp

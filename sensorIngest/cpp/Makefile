@@ -17,10 +17,10 @@
 
 
 
-pkgdatadir = $(datadir)/lobcalc
-pkgincludedir = $(includedir)/lobcalc
-pkglibdir = $(libdir)/lobcalc
-pkglibexecdir = $(libexecdir)/lobcalc
+pkgdatadir = $(datadir)/sensoringest
+pkgincludedir = $(includedir)/sensoringest
+pkglibdir = $(libdir)/sensoringest
+pkglibexecdir = $(libexecdir)/sensoringest
 am__cd = CDPATH="$${ZSH_VERSION+.}$(PATH_SEPARATOR)" && cd
 install_sh_DATA = $(install_sh) -c -m 644
 install_sh_PROGRAM = $(install_sh) -c
@@ -35,7 +35,7 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = x86_64-unknown-linux-gnu
 host_triplet = x86_64-unknown-linux-gnu
-bin_PROGRAMS = lobCalc$(EXEEXT)
+bin_PROGRAMS = sensorIngest$(EXEEXT)
 DIST_COMMON = $(am__configure_deps) $(dist_xml_DATA) \
 	$(srcdir)/Makefile.am $(srcdir)/Makefile.am.ide \
 	$(srcdir)/Makefile.in $(top_srcdir)/configure config.guess \
@@ -53,15 +53,17 @@ CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(xmldir)"
 PROGRAMS = $(bin_PROGRAMS)
-am__objects_1 = lobCalc-lobCalc.$(OBJEXT) \
-	lobCalc-lobCalc_base.$(OBJEXT) lobCalc-main.$(OBJEXT)
-am_lobCalc_OBJECTS = $(am__objects_1)
-lobCalc_OBJECTS = $(am_lobCalc_OBJECTS)
+am__objects_1 = sensorIngest-main.$(OBJEXT) \
+	sensorIngest-sensorIngest.$(OBJEXT) \
+	sensorIngest-sensorIngest_base.$(OBJEXT)
+am_sensorIngest_OBJECTS = $(am__objects_1)
+sensorIngest_OBJECTS = $(am_sensorIngest_OBJECTS)
 am__DEPENDENCIES_1 =
-lobCalc_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
-lobCalc_LINK = $(CXXLD) $(lobCalc_CXXFLAGS) $(CXXFLAGS) \
-	$(lobCalc_LDFLAGS) $(LDFLAGS) -o $@
+sensorIngest_DEPENDENCIES = $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1)
+sensorIngest_LINK = $(CXXLD) $(sensorIngest_CXXFLAGS) $(CXXFLAGS) \
+	$(sensorIngest_LDFLAGS) $(LDFLAGS) -o $@
 DEFAULT_INCLUDES = 
 depcomp = $(SHELL) $(top_srcdir)/depcomp
 am__depfiles_maybe = depfiles
@@ -75,8 +77,8 @@ COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
 CCLD = $(CC)
 LINK = $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
-SOURCES = $(lobCalc_SOURCES)
-DIST_SOURCES = $(lobCalc_SOURCES)
+SOURCES = $(sensorIngest_SOURCES)
+DIST_SOURCES = $(sensorIngest_SOURCES)
 am__vpath_adj_setup = srcdirstrip=`echo "$(srcdir)" | sed 's|.|.|g'`;
 am__vpath_adj = case $$p in \
     $(srcdir)/*) f=`echo "$$p" | sed "s|^$$srcdirstrip/||"`;; \
@@ -112,11 +114,11 @@ DIST_ARCHIVES = $(distdir).tar.gz
 GZIP_ENV = --best
 distuninstallcheck_listfiles = find . -type f -print
 distcleancheck_listfiles = find . -type f -print
-ACLOCAL = ${SHELL} /home/redhawkdev/apgRasPi/redhawk/src/lobCalc/cpp/missing --run aclocal-1.11
-AMTAR = ${SHELL} /home/redhawkdev/apgRasPi/redhawk/src/lobCalc/cpp/missing --run tar
-AUTOCONF = ${SHELL} /home/redhawkdev/apgRasPi/redhawk/src/lobCalc/cpp/missing --run autoconf
-AUTOHEADER = ${SHELL} /home/redhawkdev/apgRasPi/redhawk/src/lobCalc/cpp/missing --run autoheader
-AUTOMAKE = ${SHELL} /home/redhawkdev/apgRasPi/redhawk/src/lobCalc/cpp/missing --run automake-1.11
+ACLOCAL = ${SHELL} /home/jmccloskey/RH1.9/eclipse/workspace/sensorIngest/cpp/missing --run aclocal-1.11
+AMTAR = ${SHELL} /home/jmccloskey/RH1.9/eclipse/workspace/sensorIngest/cpp/missing --run tar
+AUTOCONF = ${SHELL} /home/jmccloskey/RH1.9/eclipse/workspace/sensorIngest/cpp/missing --run autoconf
+AUTOHEADER = ${SHELL} /home/jmccloskey/RH1.9/eclipse/workspace/sensorIngest/cpp/missing --run autoheader
+AUTOMAKE = ${SHELL} /home/jmccloskey/RH1.9/eclipse/workspace/sensorIngest/cpp/missing --run automake-1.11
 AWK = gawk
 BOOST_CPPFLAGS = -pthread -I/usr/include
 BOOST_LDFLAGS = -L/usr/lib64
@@ -130,7 +132,7 @@ CXX = g++
 CXXDEPMODE = depmode=gcc3
 CXXFLAGS = -g -O2
 CYGPATH_W = echo
-DEFS = -DPACKAGE_NAME=\"lobCalc\" -DPACKAGE_TARNAME=\"lobcalc\" -DPACKAGE_VERSION=\"1.0.0\" -DPACKAGE_STRING=\"lobCalc\ 1.0.0\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE=\"lobcalc\" -DVERSION=\"1.0.0\" -DHAVE_OMNIORB4=1 -DHAVE_LOG4CXX=1 -DHAVE_BOOST=1 -DHAVE_BOOST_THREAD=1
+DEFS = -DPACKAGE_NAME=\"sensorIngest\" -DPACKAGE_TARNAME=\"sensoringest\" -DPACKAGE_VERSION=\"1.0.0\" -DPACKAGE_STRING=\"sensorIngest\ 1.0.0\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE=\"sensoringest\" -DVERSION=\"1.0.0\" -DHAVE_OMNIORB4=1 -DHAVE_LOG4CXX=1 -DHAVE_BOOST=1 -DHAVE_BOOST_THREAD=1
 DEPDIR = .deps
 ECHO_C = 
 ECHO_N = -n
@@ -150,15 +152,15 @@ LIBS =  -llog4cxx
 LOG4CXX_CFLAGS =  
 LOG4CXX_LIBS = -llog4cxx  
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /home/redhawkdev/apgRasPi/redhawk/src/lobCalc/cpp/missing --run makeinfo
+MAKEINFO = ${SHELL} /home/jmccloskey/RH1.9/eclipse/workspace/sensorIngest/cpp/missing --run makeinfo
 MKDIR_P = /bin/mkdir -p
 OBJEXT = o
 OSSIE_HOME = /usr/local/redhawk/core
-PACKAGE = lobcalc
+PACKAGE = sensoringest
 PACKAGE_BUGREPORT = 
-PACKAGE_NAME = lobCalc
-PACKAGE_STRING = lobCalc 1.0.0
-PACKAGE_TARNAME = lobcalc
+PACKAGE_NAME = sensorIngest
+PACKAGE_STRING = sensorIngest 1.0.0
+PACKAGE_TARNAME = sensoringest
 PACKAGE_VERSION = 1.0.0
 PATH_SEPARATOR = :
 PKG_CONFIG = /usr/bin/pkg-config
@@ -170,10 +172,10 @@ SHELL = /bin/sh
 STRIP = 
 VERSION = 1.0.0
 WITH_LOG4CXX = yes
-abs_builddir = /home/redhawkdev/apgRasPi/redhawk/src/lobCalc/cpp
-abs_srcdir = /home/redhawkdev/apgRasPi/redhawk/src/lobCalc/cpp
-abs_top_builddir = /home/redhawkdev/apgRasPi/redhawk/src/lobCalc/cpp
-abs_top_srcdir = /home/redhawkdev/apgRasPi/redhawk/src/lobCalc/cpp
+abs_builddir = /home/jmccloskey/RH1.9/eclipse/workspace/sensorIngest/cpp
+abs_srcdir = /home/jmccloskey/RH1.9/eclipse/workspace/sensorIngest/cpp
+abs_top_builddir = /home/jmccloskey/RH1.9/eclipse/workspace/sensorIngest/cpp
+abs_top_srcdir = /home/jmccloskey/RH1.9/eclipse/workspace/sensorIngest/cpp
 ac_ct_CC = gcc
 ac_ct_CXX = g++
 am__include = include
@@ -181,7 +183,7 @@ am__leading_dot = .
 am__quote = 
 am__tar = ${AMTAR} chof - "$$tardir"
 am__untar = ${AMTAR} xf -
-bindir = $(prefix)/dom/components/lobCalc/cpp/
+bindir = $(prefix)/dom/components/sensorIngest/cpp/
 build = x86_64-unknown-linux-gnu
 build_alias = 
 build_cpu = x86_64
@@ -202,7 +204,7 @@ host_vendor = unknown
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/redhawkdev/apgRasPi/redhawk/src/lobCalc/cpp/install-sh
+install_sh = ${SHELL} /home/jmccloskey/RH1.9/eclipse/workspace/sensorIngest/cpp/install-sh
 libdir = ${exec_prefix}/lib64
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -222,25 +224,25 @@ target_alias =
 top_build_prefix = 
 top_builddir = .
 top_srcdir = .
-ossieName = lobCalc
-xmldir = $(prefix)/dom/components/lobCalc/
-dist_xml_DATA = ../lobCalc.scd.xml ../lobCalc.prf.xml ../lobCalc.spd.xml
+ossieName = sensorIngest
+xmldir = $(prefix)/dom/components/sensorIngest/
+dist_xml_DATA = ../sensorIngest.scd.xml ../sensorIngest.prf.xml ../sensorIngest.spd.xml
 
 # This file is regularly auto-generated by the REDHAWK IDE. Do not modify!
 # Files can be excluded by right-clicking on the file in the project explorer
 # and choosing Resource Configurations -> Exclude from build. Re-include files
 # by opening the Properties dialog of your project and choosing C/C++ Build ->
 # Tool Chain Editor, and un-checking "Exclude resource from build "
-redhawk_SOURCES_auto = lobCalc.cpp lobCalc.h lobCalc_base.cpp \
-	lobCalc_base.h main.cpp peakdetect.h
+redhawk_SOURCES_auto = main.cpp sensorIngest.cpp sensorIngest.h \
+	sensorIngest_base.cpp sensorIngest_base.h
 
 # Sources, libraries and library directories are auto-included from a file
 # generated by the REDHAWK IDE. You can remove/modify the following lines if
 # you wish to manually control these options.
-lobCalc_SOURCES = $(redhawk_SOURCES_auto)
-lobCalc_CXXFLAGS = -Wall $(PROJECTDEPS_CFLAGS) $(BOOST_CPPFLAGS) $(INTERFACEDEPS_CFLAGS) $(redhawk_INCLUDES_auto)
-lobCalc_LDADD = $(PROJECTDEPS_LIBS) $(BOOST_LDFLAGS) $(BOOST_THREAD_LIB) $(INTERFACEDEPS_LIBS) $(redhawk_LDADD_auto)
-lobCalc_LDFLAGS = -Wall $(redhawk_LDFLAGS_auto)
+sensorIngest_SOURCES = $(redhawk_SOURCES_auto)
+sensorIngest_CXXFLAGS = -Wall $(PROJECTDEPS_CFLAGS) $(BOOST_CPPFLAGS) $(INTERFACEDEPS_CFLAGS) $(redhawk_INCLUDES_auto)
+sensorIngest_LDADD = $(PROJECTDEPS_LIBS) $(BOOST_LDFLAGS) $(BOOST_THREAD_LIB) $(INTERFACEDEPS_LIBS) $(redhawk_LDADD_auto)
+sensorIngest_LDFLAGS = -Wall $(redhawk_LDFLAGS_auto)
 all: all-am
 
 .SUFFIXES:
@@ -316,9 +318,9 @@ uninstall-binPROGRAMS:
 
 clean-binPROGRAMS:
 	-test -z "$(bin_PROGRAMS)" || rm -f $(bin_PROGRAMS)
-lobCalc$(EXEEXT): $(lobCalc_OBJECTS) $(lobCalc_DEPENDENCIES) 
-	@rm -f lobCalc$(EXEEXT)
-	$(lobCalc_LINK) $(lobCalc_OBJECTS) $(lobCalc_LDADD) $(LIBS)
+sensorIngest$(EXEEXT): $(sensorIngest_OBJECTS) $(sensorIngest_DEPENDENCIES) 
+	@rm -f sensorIngest$(EXEEXT)
+	$(sensorIngest_LINK) $(sensorIngest_OBJECTS) $(sensorIngest_LDADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
@@ -326,9 +328,9 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-include ./$(DEPDIR)/lobCalc-lobCalc.Po
-include ./$(DEPDIR)/lobCalc-lobCalc_base.Po
-include ./$(DEPDIR)/lobCalc-main.Po
+include ./$(DEPDIR)/sensorIngest-main.Po
+include ./$(DEPDIR)/sensorIngest-sensorIngest.Po
+include ./$(DEPDIR)/sensorIngest-sensorIngest_base.Po
 
 .cpp.o:
 	$(CXXCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
@@ -344,47 +346,47 @@ include ./$(DEPDIR)/lobCalc-main.Po
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
 #	$(CXXCOMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
 
-lobCalc-lobCalc.o: lobCalc.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lobCalc_CXXFLAGS) $(CXXFLAGS) -MT lobCalc-lobCalc.o -MD -MP -MF $(DEPDIR)/lobCalc-lobCalc.Tpo -c -o lobCalc-lobCalc.o `test -f 'lobCalc.cpp' || echo '$(srcdir)/'`lobCalc.cpp
-	$(am__mv) $(DEPDIR)/lobCalc-lobCalc.Tpo $(DEPDIR)/lobCalc-lobCalc.Po
-#	source='lobCalc.cpp' object='lobCalc-lobCalc.o' libtool=no \
+sensorIngest-main.o: main.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sensorIngest_CXXFLAGS) $(CXXFLAGS) -MT sensorIngest-main.o -MD -MP -MF $(DEPDIR)/sensorIngest-main.Tpo -c -o sensorIngest-main.o `test -f 'main.cpp' || echo '$(srcdir)/'`main.cpp
+	$(am__mv) $(DEPDIR)/sensorIngest-main.Tpo $(DEPDIR)/sensorIngest-main.Po
+#	source='main.cpp' object='sensorIngest-main.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lobCalc_CXXFLAGS) $(CXXFLAGS) -c -o lobCalc-lobCalc.o `test -f 'lobCalc.cpp' || echo '$(srcdir)/'`lobCalc.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sensorIngest_CXXFLAGS) $(CXXFLAGS) -c -o sensorIngest-main.o `test -f 'main.cpp' || echo '$(srcdir)/'`main.cpp
 
-lobCalc-lobCalc.obj: lobCalc.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lobCalc_CXXFLAGS) $(CXXFLAGS) -MT lobCalc-lobCalc.obj -MD -MP -MF $(DEPDIR)/lobCalc-lobCalc.Tpo -c -o lobCalc-lobCalc.obj `if test -f 'lobCalc.cpp'; then $(CYGPATH_W) 'lobCalc.cpp'; else $(CYGPATH_W) '$(srcdir)/lobCalc.cpp'; fi`
-	$(am__mv) $(DEPDIR)/lobCalc-lobCalc.Tpo $(DEPDIR)/lobCalc-lobCalc.Po
-#	source='lobCalc.cpp' object='lobCalc-lobCalc.obj' libtool=no \
+sensorIngest-main.obj: main.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sensorIngest_CXXFLAGS) $(CXXFLAGS) -MT sensorIngest-main.obj -MD -MP -MF $(DEPDIR)/sensorIngest-main.Tpo -c -o sensorIngest-main.obj `if test -f 'main.cpp'; then $(CYGPATH_W) 'main.cpp'; else $(CYGPATH_W) '$(srcdir)/main.cpp'; fi`
+	$(am__mv) $(DEPDIR)/sensorIngest-main.Tpo $(DEPDIR)/sensorIngest-main.Po
+#	source='main.cpp' object='sensorIngest-main.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lobCalc_CXXFLAGS) $(CXXFLAGS) -c -o lobCalc-lobCalc.obj `if test -f 'lobCalc.cpp'; then $(CYGPATH_W) 'lobCalc.cpp'; else $(CYGPATH_W) '$(srcdir)/lobCalc.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sensorIngest_CXXFLAGS) $(CXXFLAGS) -c -o sensorIngest-main.obj `if test -f 'main.cpp'; then $(CYGPATH_W) 'main.cpp'; else $(CYGPATH_W) '$(srcdir)/main.cpp'; fi`
 
-lobCalc-lobCalc_base.o: lobCalc_base.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lobCalc_CXXFLAGS) $(CXXFLAGS) -MT lobCalc-lobCalc_base.o -MD -MP -MF $(DEPDIR)/lobCalc-lobCalc_base.Tpo -c -o lobCalc-lobCalc_base.o `test -f 'lobCalc_base.cpp' || echo '$(srcdir)/'`lobCalc_base.cpp
-	$(am__mv) $(DEPDIR)/lobCalc-lobCalc_base.Tpo $(DEPDIR)/lobCalc-lobCalc_base.Po
-#	source='lobCalc_base.cpp' object='lobCalc-lobCalc_base.o' libtool=no \
+sensorIngest-sensorIngest.o: sensorIngest.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sensorIngest_CXXFLAGS) $(CXXFLAGS) -MT sensorIngest-sensorIngest.o -MD -MP -MF $(DEPDIR)/sensorIngest-sensorIngest.Tpo -c -o sensorIngest-sensorIngest.o `test -f 'sensorIngest.cpp' || echo '$(srcdir)/'`sensorIngest.cpp
+	$(am__mv) $(DEPDIR)/sensorIngest-sensorIngest.Tpo $(DEPDIR)/sensorIngest-sensorIngest.Po
+#	source='sensorIngest.cpp' object='sensorIngest-sensorIngest.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lobCalc_CXXFLAGS) $(CXXFLAGS) -c -o lobCalc-lobCalc_base.o `test -f 'lobCalc_base.cpp' || echo '$(srcdir)/'`lobCalc_base.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sensorIngest_CXXFLAGS) $(CXXFLAGS) -c -o sensorIngest-sensorIngest.o `test -f 'sensorIngest.cpp' || echo '$(srcdir)/'`sensorIngest.cpp
 
-lobCalc-lobCalc_base.obj: lobCalc_base.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lobCalc_CXXFLAGS) $(CXXFLAGS) -MT lobCalc-lobCalc_base.obj -MD -MP -MF $(DEPDIR)/lobCalc-lobCalc_base.Tpo -c -o lobCalc-lobCalc_base.obj `if test -f 'lobCalc_base.cpp'; then $(CYGPATH_W) 'lobCalc_base.cpp'; else $(CYGPATH_W) '$(srcdir)/lobCalc_base.cpp'; fi`
-	$(am__mv) $(DEPDIR)/lobCalc-lobCalc_base.Tpo $(DEPDIR)/lobCalc-lobCalc_base.Po
-#	source='lobCalc_base.cpp' object='lobCalc-lobCalc_base.obj' libtool=no \
+sensorIngest-sensorIngest.obj: sensorIngest.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sensorIngest_CXXFLAGS) $(CXXFLAGS) -MT sensorIngest-sensorIngest.obj -MD -MP -MF $(DEPDIR)/sensorIngest-sensorIngest.Tpo -c -o sensorIngest-sensorIngest.obj `if test -f 'sensorIngest.cpp'; then $(CYGPATH_W) 'sensorIngest.cpp'; else $(CYGPATH_W) '$(srcdir)/sensorIngest.cpp'; fi`
+	$(am__mv) $(DEPDIR)/sensorIngest-sensorIngest.Tpo $(DEPDIR)/sensorIngest-sensorIngest.Po
+#	source='sensorIngest.cpp' object='sensorIngest-sensorIngest.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lobCalc_CXXFLAGS) $(CXXFLAGS) -c -o lobCalc-lobCalc_base.obj `if test -f 'lobCalc_base.cpp'; then $(CYGPATH_W) 'lobCalc_base.cpp'; else $(CYGPATH_W) '$(srcdir)/lobCalc_base.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sensorIngest_CXXFLAGS) $(CXXFLAGS) -c -o sensorIngest-sensorIngest.obj `if test -f 'sensorIngest.cpp'; then $(CYGPATH_W) 'sensorIngest.cpp'; else $(CYGPATH_W) '$(srcdir)/sensorIngest.cpp'; fi`
 
-lobCalc-main.o: main.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lobCalc_CXXFLAGS) $(CXXFLAGS) -MT lobCalc-main.o -MD -MP -MF $(DEPDIR)/lobCalc-main.Tpo -c -o lobCalc-main.o `test -f 'main.cpp' || echo '$(srcdir)/'`main.cpp
-	$(am__mv) $(DEPDIR)/lobCalc-main.Tpo $(DEPDIR)/lobCalc-main.Po
-#	source='main.cpp' object='lobCalc-main.o' libtool=no \
+sensorIngest-sensorIngest_base.o: sensorIngest_base.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sensorIngest_CXXFLAGS) $(CXXFLAGS) -MT sensorIngest-sensorIngest_base.o -MD -MP -MF $(DEPDIR)/sensorIngest-sensorIngest_base.Tpo -c -o sensorIngest-sensorIngest_base.o `test -f 'sensorIngest_base.cpp' || echo '$(srcdir)/'`sensorIngest_base.cpp
+	$(am__mv) $(DEPDIR)/sensorIngest-sensorIngest_base.Tpo $(DEPDIR)/sensorIngest-sensorIngest_base.Po
+#	source='sensorIngest_base.cpp' object='sensorIngest-sensorIngest_base.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lobCalc_CXXFLAGS) $(CXXFLAGS) -c -o lobCalc-main.o `test -f 'main.cpp' || echo '$(srcdir)/'`main.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sensorIngest_CXXFLAGS) $(CXXFLAGS) -c -o sensorIngest-sensorIngest_base.o `test -f 'sensorIngest_base.cpp' || echo '$(srcdir)/'`sensorIngest_base.cpp
 
-lobCalc-main.obj: main.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lobCalc_CXXFLAGS) $(CXXFLAGS) -MT lobCalc-main.obj -MD -MP -MF $(DEPDIR)/lobCalc-main.Tpo -c -o lobCalc-main.obj `if test -f 'main.cpp'; then $(CYGPATH_W) 'main.cpp'; else $(CYGPATH_W) '$(srcdir)/main.cpp'; fi`
-	$(am__mv) $(DEPDIR)/lobCalc-main.Tpo $(DEPDIR)/lobCalc-main.Po
-#	source='main.cpp' object='lobCalc-main.obj' libtool=no \
+sensorIngest-sensorIngest_base.obj: sensorIngest_base.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sensorIngest_CXXFLAGS) $(CXXFLAGS) -MT sensorIngest-sensorIngest_base.obj -MD -MP -MF $(DEPDIR)/sensorIngest-sensorIngest_base.Tpo -c -o sensorIngest-sensorIngest_base.obj `if test -f 'sensorIngest_base.cpp'; then $(CYGPATH_W) 'sensorIngest_base.cpp'; else $(CYGPATH_W) '$(srcdir)/sensorIngest_base.cpp'; fi`
+	$(am__mv) $(DEPDIR)/sensorIngest-sensorIngest_base.Tpo $(DEPDIR)/sensorIngest-sensorIngest_base.Po
+#	source='sensorIngest_base.cpp' object='sensorIngest-sensorIngest_base.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lobCalc_CXXFLAGS) $(CXXFLAGS) -c -o lobCalc-main.obj `if test -f 'main.cpp'; then $(CYGPATH_W) 'main.cpp'; else $(CYGPATH_W) '$(srcdir)/main.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sensorIngest_CXXFLAGS) $(CXXFLAGS) -c -o sensorIngest-sensorIngest_base.obj `if test -f 'sensorIngest_base.cpp'; then $(CYGPATH_W) 'sensorIngest_base.cpp'; else $(CYGPATH_W) '$(srcdir)/sensorIngest_base.cpp'; fi`
 install-dist_xmlDATA: $(dist_xml_DATA)
 	@$(NORMAL_INSTALL)
 	test -z "$(xmldir)" || $(MKDIR_P) "$(DESTDIR)$(xmldir)"

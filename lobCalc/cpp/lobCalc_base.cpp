@@ -137,4 +137,39 @@ void lobCalc_base::loadProperties()
                 "external",
                 "configure");
 
+    addProperty(switchPattern_prop,
+                "switchPattern_prop",
+                "",
+                "readwrite",
+                "",
+                "external",
+                "configure");
+
+    addProperty(streamID_prop,
+                "initial",
+                "streamID_prop",
+                "",
+                "readwrite",
+                "",
+                "external",
+                "configure");
+
+    addProperty(test_mode,
+                false,
+                "test_mode",
+                "",
+                "readwrite",
+                "",
+                "external",
+                "configure");
+
+    addProperty(test_LOB,
+                45,
+                "test_LOB",
+                "",
+                "readwrite",
+                "",
+                "external",
+                "configure");
+
 }

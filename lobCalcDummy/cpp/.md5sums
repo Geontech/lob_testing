@@ -1,0 +1,10 @@
+03c98b9e967684a2f7e2c58cc68e9cc7 lobCalcDummy_base.cpp
+edf627dabd076def86b125d1763c6989 main.cpp
+7c809860fe6e1ed9d21c311631986d13 reconf
+49193c4e733a83acdcf0229947506b10 lobCalcDummy.cpp
+2817a1d0c9e7424063b0981a9177e01e lobCalcDummy.h
+dacdf3ff763a2d04aea3a31aeb2a321f configure.ac
+6943f7f2b58e886bec67400c80dbc7c0 Makefile.am
+87175466e59519175c4ba9943bdad485 lobCalcDummy_base.h
+2edeb4570ba55b42155b992f38587fb6 build.sh
+622356e87f37dd4e002151b440d907bb Makefile.am.ide

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties PUBLIC "-//JTRS//DTD SCA V2.2.2 PRF//EN" "properties.dtd">
+<properties>
+  <simple id="LOB_angle" mode="readwrite" type="float">
+    <value>0</value>
+    <range max="90" min="-90"/>
+    <kind kindtype="configure"/>
+    <action type="external"/>
+  </simple>
+  <simple id="LOB_valid" mode="readwrite" type="boolean">
+    <value>False</value>
+    <kind kindtype="configure"/>
+    <action type="external"/>
+  </simple>
+  <simple id="Threshold" mode="readwrite" type="float">
+    <value>0</value>
+    <kind kindtype="configure"/>
+    <action type="external"/>
+  </simple>
+</properties>

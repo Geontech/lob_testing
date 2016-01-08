@@ -1,0 +1,13 @@
+Summary:
+The DF work done to date was MATLAB simulations and an untested RedHawk component. It is located in the MATLAB, lobCalc, lobCalcDummy, and pseudoDopplerSim directories.
+
+After the contest, we tried to correlate the MATLAB results with some hardware testing using the RTL, but were unsuccessful. The source of the discrepancy between sim and hardware is unknown at this point.
+
+Some more technical details:
+The DF algorithm we were exploring was not the typical version of psuedo-doppler,  which compares the phase of a signal collected from antennas switched in a rotational pattern to a known reference signal.
+
+Instead, we theorized that direction information could be extracted by comparing the output of switching pairs of antennas in the array to each other.
+
+To test the theory, we put together a MATLAB model for the pseudo doppler effect for the 4 antenna setup used in RasHAWK (DFsim.m). We then took this model and created a MATLAB gui (DF_sim_gui.m) which plotted the output of the different pairs of antennas and allowed you to vary the line of bearing (LOB) of the test signal and then estimated the LOB using the plots.
+
+Initial results looked like it might be possible to get DF information using this method. However, when we tried some basic measurements with RasHawk and compared them to this simulation, we didn't see any correlation. Again, we're not sure whether the algorithm or the experiment or both are flawed.
